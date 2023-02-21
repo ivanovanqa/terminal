@@ -1,0 +1,22 @@
+#!/bin/bash
+echo "Запуск скрипта"
+echo "Зайти в папку course_qa"
+find . -type d -name "course_qa"
+cd course_qa
+echo "Создать папку script_test и зайти в нее"
+mkdir script_test
+cd script_test
+echo "Создать 3 папки"
+mkdir homework_1 homework_2 homework_3
+echo "Зайти в папку homework_1"
+cd homework_1
+echo "Создать 5 файлов (3 txt, 2 json)"
+touch file_1.txt file_2.txt file_3.txt file_4.json file_5.json
+echo "Создать 3 папки"
+mkdir folder_1 folder_2 folder_3
+echo "Вывести список содержимого папки"
+ls -la
+echo "Переместить любые 2 файла, которые вы создали, в любую другую папку"
+cd ..
+mv -v homework_1/file_1.txt homework_1/file_4.json homework_2
+echo "Скрипт выполнен"
